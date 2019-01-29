@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>BioAlphabet</title>
+
+</head>
+<body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="assets/html2canvas/js/html2canvas.min.js"></script>
+<script src="assets/filesaver/js/FileSaver.min.js"></script>
+
+<script src="js/index.js"></script>
+
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">BioAlphabet</a>
+        <ul class="navbar-nav ">
+            <!--<li class="nav-item active">-->
+                <!--<a class="nav-link" href="#">Convert <span class="sr-only">(current)</span></a>-->
+            <!--</li>-->
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/davidhoksza/bioalphabet/" target="_blank">Github</a>
+            </li>
+        </ul>
+</nav>
+
+<!--<h1 class="text-center pt-3 pb-3">BioAlphabet Convertor</h1>-->
+
+
+<div class="container-fluid">
+
+    <div class="row justify-content-md-center pt-3">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <!--<div class="card-header text-center">-->
+                    <!--Input-->
+                <!--</div>-->
+                <div class="card-body">
+                    <div class="form-group shadow">
+                        <textarea id="idInputText" class="form-control" rows="3">Text to convert</textarea>
+                    </div>
+                    <div class="form-group row" data-toggle="tooltip" data-placement="top" title="Check the project's GitHub page for information about the available alphabets.">
+                        <label for="alphabetSelect" class="col-sm-2 col-form-label">Alphabet:</label>
+                        <div class="col-sm-10">
+                            <select id="alphabetSelect" class="form-control" >
+                                <option value="protein_alphabet" selected>Protein alphabet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="btnConvert" type="button" class="btn btn-primary btn-md btn-block shadow">Convert</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center pt-3 pb-3" id="rowResult">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-body">
+
+                    <div id="outputArea" class="border"></div>
+
+                    <div id="buttonStripe" class="pt-3 text-right">
+                        <div class="collapse pb-3" id="collapseExample">
+                            <div class="card card-body">
+                                <form>
+
+                                    <div class="form-group row">
+                                        <label for="letterSize" class="col-sm-2 col-form-label">Letter width (px):</label>
+                                        <div class="col-sm-10">
+                                            <input id="letterSize" type="number" class="custom-range" min="5" max="300" value="100" >
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label" for="chkWrap">Do not wrap</label>
+                                        <div class="col-sm-1 justify-content-begin">
+                                                <input type="checkbox" id="chkWrap">
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <a class="btn btn-danger btn-sm shadow" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Settings
+                        </a>
+
+                        <button id="btnExport" type="button" class="btn btn-primary btn-sm shadow">Export</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -18,7 +18,7 @@ to add. Should you know about any other relevant alphabet, please [let me know](
 - [Protein alphabet](http://www.bioch.ox.ac.uk/howarth/alphabet.htm)
     - Alphabet consisting of protein 3D structures comming from [PDB](https://www.ebi.ac.uk/pdbe/) created by
     Mark Howarth. To produce the image files used in BioAlphabet, I used the PyMOL *pse* files which 
-    can be downloaded from Mark Horwath's page and used a PyMOL script (available in the scripts directory)
+    can be downloaded from Mark Horwath's page and wrote a PyMOL script (available in the scripts directory)
     to convert those into images. 
     
     

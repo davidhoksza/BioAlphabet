@@ -4,9 +4,9 @@ BioAlphabet is a simple service for conversion of a given text into a set of pic
 representing letters constituting the input text in given domain. 
 
 BioAlphabet allows you to convert an arbitrary text which is then rendered in the 
-alphabet of your choice. In the settings, you have the option to select
-size of the letters and also whether you want wrap the text to fit in the 
-window. The resulting image can then be exported to a PNG file. 
+alphabet of your choice (and thus all the credit should go to the people who created these alphabets :) ). 
+In the settings, you have the option to select size of the letters and also whether you want 
+wrap the text to fit in the window. The resulting image can then be exported to a PNG file. 
 The output will look exactly the same as it shows in your web browsers, 
 including the line breaks.
 

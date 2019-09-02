@@ -13,6 +13,8 @@ including the line breaks.
 Follows a lists of currently supported alphabets and alphabets which I intend
 to add. Should you know about any other relevant alphabet, please [let me know](mailto:david.hoksza@gmail.com).
 
+#### You can run the app at https://davidhoksza.github.io/BioAlphabet/
+
 ## Currently supported alphabets
 
 - [Protein alphabet](http://www.bioch.ox.ac.uk/howarth/alphabet.htm)

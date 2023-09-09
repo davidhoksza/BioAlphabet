@@ -13,6 +13,7 @@
 #outputArea{
     /*white-space: nowrap;*/
     overflow: auto;
+    border: none;
 }
 
 /*.html2canvas-container { width: 8000px !important; height: 3000px !important; }*/

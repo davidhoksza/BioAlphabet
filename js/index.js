@@ -33,7 +33,7 @@ function convert(){
     for (let i = 0; i < inputText.length; i++) {
         let letter = inputText[i];
         if (/^[a-zA-Z]/.test(letter)){
-            $outputArea.append(`<img src="img/${alphabet}/hi_res/${letter}.png" class="letter">`);
+            $outputArea.append(`<img src="img/${alphabet}/hi_res/${letter}.png" class="letter" crossOrigin="Anonymous">`);
         } else if (letter == '\n'){
             $outputArea.append('<br/>');
 
@@ -49,10 +49,16 @@ function exportToImg(){
     // $('.html2canvas-container').width($('#outputArea').width());
 
     $outputArea.css('overflow', 'visible');
-    html2canvas(document.querySelector("#outputArea"), {width: $('#outputArea')[0].scrollWidth}).then(canvas => {
+    $outputArea.toggleClass('border', false);
+    const settings= {
+        width: $('#outputArea')[0].scrollWidth,         
+        backgroundColor: null
+    }    
+    html2canvas(document.querySelector("#outputArea"), settings).then(canvas => {
         canvas.toBlob(function(blob) {
             saveAs(blob, "text.png");
             $outputArea.css('overflow', 'auto');
+            $outputArea.toggleClass('border', true);
         });
 
     });

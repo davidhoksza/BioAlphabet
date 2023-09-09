@@ -33,7 +33,7 @@ function convert(){
     for (let i = 0; i < inputText.length; i++) {
         let letter = inputText[i];
         if (/^[a-zA-Z]/.test(letter)){
-            $outputArea.append(`<img src="img/${alphabet}/hi_res/${letter}.png" class="letter" crossOrigin="Anonymous">`);
+            $outputArea.append(`<img src="img/${alphabet}/hi_res/${letter}.png" class="letter">`);
         } else if (letter == '\n'){
             $outputArea.append('<br/>');
 
